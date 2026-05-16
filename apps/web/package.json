@@ -12,9 +12,11 @@
     "test": "vitest run",
     "lint": "eslint",
     "format": "prettier --write . && eslint --fix",
-    "check": "prettier --check ."
+    "check": "prettier --check .",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@repo/types": "*",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-devtools": "latest",
     "@tanstack/react-router": "latest",

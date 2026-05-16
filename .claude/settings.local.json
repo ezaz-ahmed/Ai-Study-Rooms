@@ -8,7 +8,8 @@
       "Skill(context7-mcp)",
       "mcp__context7__resolve-library-id",
       "mcp__context7__query-docs",
-      "Bash(bunx @better-auth/cli generate --output ./src/db/schema.ts --config ./src/auth.ts)"
+      "Bash(bunx @better-auth/cli generate --output ./src/db/schema.ts --config ./src/auth.ts)",
+      "Bash(bun install *)"
     ]
   }
 }

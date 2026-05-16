@@ -25,7 +25,7 @@
     "tutor"
   ],
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,json,md,css}": [
+    "*.{ts,tsx,js,jsx,mjs,cjs,json,md,css}": [
       "prettier --write"
     ]
   },
