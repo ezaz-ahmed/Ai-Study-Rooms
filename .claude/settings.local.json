@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Kiseki\\\\Desktop\\\\Private\\\\ai-study-rooms\\\\apps\\\\api\\\\src\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "Skill(context7-mcp)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "Bash(bunx @better-auth/cli generate --output ./src/db/schema.ts --config ./src/auth.ts)"
+    ]
+  }
+}

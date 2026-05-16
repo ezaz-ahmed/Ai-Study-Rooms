@@ -1,4 +1,4 @@
-import { pgTable, text, boolean, timestamp } from 'drizzle-orm/pg-core';
+import { boolean, pgTable, text, timestamp } from 'drizzle-orm/pg-core';
 
 export const user = pgTable('user', {
   id: text('id').primaryKey(),
@@ -49,3 +49,5 @@ export const verification = pgTable('verification', {
   createdAt: timestamp('created_at'),
   updatedAt: timestamp('updated_at'),
 });
+
+export const schema = { user, session, account, verification };
