@@ -1,26 +1,7 @@
 {
-  "version": "0.0.1",
   "name": "ai-study-rooms",
+  "version": "0.0.1",
   "author": "Ezaz Ahmed",
-  "private": true,
-  "packageManager": "bun@1.3.11",
-  "keywords": [
-    "education",
-    "study",
-    "ai",
-    "real-time",
-    "chat",
-    "tutor"
-  ],
-  "description": "A platform where learners join dedicated real-time study rooms for their courses, featuring group chat, live sessions, and an AI tutor",
-  "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "lint": "turbo run lint",
-    "format": "prettier --write .",
-    "check-types": "turbo run check-types",
-    "prepare": "husky"
-  },
   "devDependencies": {
     "turbo": "^2.9.14",
     "typescript": "5.9.2",
@@ -31,17 +12,35 @@
     "@commitlint/config-conventional": "^19.0.0",
     "husky": "^9.0.0"
   },
+  "description": "A platform where learners join dedicated real-time study rooms for their courses, featuring group chat, live sessions, and an AI tutor",
   "engines": {
     "node": ">=18"
+  },
+  "keywords": [
+    "education",
+    "study",
+    "ai",
+    "real-time",
+    "chat",
+    "tutor"
+  ],
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,md,css}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "bun@1.3.11",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write .",
+    "check-types": "turbo run check-types",
+    "prepare": "husky"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  }
+  ]
 }
