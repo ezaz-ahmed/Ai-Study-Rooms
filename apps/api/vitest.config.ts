@@ -14,6 +14,6 @@ export default defineConfig({
         parser: { syntax: 'typescript', decorators: true },
         transform: { legacyDecorator: true, decoratorMetadata: true },
       },
-    }),
+    }) as any,
   ],
 });
