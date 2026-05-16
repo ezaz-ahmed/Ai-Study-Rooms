@@ -1,1 +1,12 @@
-bunx lint-staged
+current_branch="$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+
+if [ "$current_branch" = "main" ] || \
+	[ "$GITHUB_BASE_REF" = "main" ] || \
+	[ "$CI_MERGE_REQUEST_TARGET_BRANCH_NAME" = "main" ] || \
+	[ "$SYSTEM_PULLREQUEST_TARGETBRANCH" = "main" ] || \
+	[ "$SYSTEM_PULLREQUEST_TARGETBRANCH" = "refs/heads/main" ] || \
+	[ "$BUILDKITE_PULL_REQUEST_BASE_BRANCH" = "main" ]; then
+	bunx lint-staged
+else
+	echo "Skipping pre-commit checks outside main/PR-to-main"
+fi
